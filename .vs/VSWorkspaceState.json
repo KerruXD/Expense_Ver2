@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ASI.Basecode.Data",
+    "\\ASI.Basecode.Data\\Interfaces",
+    "\\ASI.Basecode.Services",
+    "\\ASI.Basecode.Services\\Services",
+    "\\ASI.Basecode.WebApp",
+    "\\ASI.Basecode.WebApp\\Controllers",
+    "\\ASI.Basecode.WebApp\\Views",
+    "\\ASI.Basecode.WebApp\\Views\\Category",
+    "\\ASI.Basecode.WebApp\\Views\\Expense",
+    "\\ASI.Basecode.WebApp\\wwwroot"
+  ],
+  "SelectedNode": "\\ASI.Basecode.WebApp\\Controllers\\CategoryController.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ASI.Basecode.Data.Models.Expense>
+
+<div class="container pt-5">
+    <h1>Expenses</h1>
+
+    <!-- Filter Form -->
+    <form method="get" asp-action="Index">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label for="startDate">Start Date</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" />
+            </div>
+            <div class="col-md-3">
+                <label for="endDate">End Date</label>
+                <input type="date" class="form-control" id="endDate" name="endDate" />
+            </div>
+            <div class="col-md-3">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category">
+                    <option value="">All Categories</option>
+                    @foreach (var category in ViewBag.Categories)
+
+                    {
+                        <option value="@category.CategoryID">@category.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </form>
+
+    <a asp-controller="Expense" asp-action="Create" class="btn btn-outline-primary mb-3">Add Expense</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary mb-3">Back</a>
+
+    @if (Model == null || !Model.Any())
+
+    {
+        <h4 class="font-weight-bold">No Expenses Existing</h4>
+    }
+
+    else
+
+    {
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var expense in Model)
+
+                {
+                    <tr>
+                        <td>@expense.Title</td>
+                        <td>₱@expense.Amount</td>
+                        <td>@(expense.Category != null ? expense.Category.CategoryName : "No Category")</td>
+                        <td>@expense.Description</td>
+                        <td>@expense.Date.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <a asp-controller="Expense" asp-action="Edit" asp-route-id="@expense.ExpenseID" class="btn btn-warning text-white">Edit</a>
+                            <a href="@Url.Action("Delete", "Expense", new { id = expense.ExpenseID })"
+                               class="btn btn-danger text-white"
+                               onclick="return confirm('Do you wish to delete this Expense?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

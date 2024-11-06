@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center pt-5">
+    <h1 class="display-5">Welcome @HttpContextAccessor.HttpContext.Session.GetString("UserName")!</h1>
+
+    <div class="logosec mt-4">
+        <a asp-controller="Expense" asp-action="Index" class="btn btn-outline-primary">Expense Management</a>
+    </div>
+    <div class="logosec mt-4">
+        <a asp-controller="Category" asp-action="Index" class="btn btn-outline-primary">Category Management</a>
+    </div>
+</div>

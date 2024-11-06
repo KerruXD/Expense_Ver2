@@ -1,0 +1,14 @@
+﻿@model ASI.Basecode.Data.Models.Category
+
+<div class="pt-5">
+    <h1>Add Category</h1>
+    <form method="post" asp-action="Create">
+        <div class="form-group">
+            <label>Category Name</label>
+            <input type="text" class="form-control" asp-for="CategoryName" placeholder="Enter Category Name" />
+            <span asp-validation-for="CategoryName" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>

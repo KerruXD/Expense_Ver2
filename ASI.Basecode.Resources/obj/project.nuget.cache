@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7xwHhu9OHY4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kerr Harvey\\Desktop\\Trish\\Elasi_Expense-main\\Elasi_Expense-main\\ASI.Basecode.Resources\\ASI.Basecode.Resources.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kerr Harvey\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Kerr Harvey\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
+    "C:\\Users\\Kerr Harvey\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512"
+  ],
+  "logs": []
+}
